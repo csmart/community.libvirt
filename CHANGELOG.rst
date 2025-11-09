@@ -4,6 +4,41 @@ Community.Libvirt Release Notes
 
 .. contents:: Topics
 
+v2.1.0
+======
+
+Release Summary
+---------------
+
+This is the minor release of the ``community.libvirt`` collection.
+This changelog contains all changes to the modules and plugins in this collection
+that have been made after the previous release.
+
+Minor Changes
+-------------
+
+- virt_cloud_instance - added new networks.source_opts parameter to provide additional macvtap options.
+- virt_cloud_instance - enhanced cloud_init configuration handling for sub-options (meta-data, user-data, and network-config) to support both string and dictionary inputs.
+- virt_cloud_instance - enhanced networks.source parameter to support both string and dictionary inputs.
+- virt_install - added new networks.source_opts parameter to provide additional macvtap options.
+- virt_install - enhanced cloud_init configuration handling for sub-options (meta-data, user-data, and network-config) to support both string and dictionary inputs.
+- virt_install - enhanced networks.source parameter to support both string and dictionary inputs.
+- virt_install - refactored common virt-install functionality into module_utils and doc_fragments to enable code reuse between modules.
+- virt_volume - New return key/value pairs 'Type', 'Capacity' and 'Allocation' were added to command 'list_volumes' (https://github.com/ansible-collections/community.libvirt/issues/187)
+
+Bugfixes
+--------
+
+- virt_cloud_instance - fixed cloud_init configuration handling for meta-data.
+- virt_cloud_instance - fixed the dict-based options handling for resource, and sysinfo options.
+- virt_install - fixed cloud_init configuration handling for meta-data, user-data, and network-config.
+- virt_install - fixed the dict-based options handling for events, resource, and sysinfo options.
+
+New Modules
+-----------
+
+- community.libvirt.virt_cloud_instance - Provision new virtual machines from cloud images via libvirt
+
 v2.0.0
 ======
 
